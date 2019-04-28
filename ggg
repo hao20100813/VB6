@@ -1,0 +1,1801 @@
+reload          Halt and reload system
+shun            Manages the filtering of packets from undesired hosts
+who             Show active administration sessions on PIX
+write           Write config to net, flash, floppy, or terminal, or erase flash
+pix535#  who
+        0: 172.31.0.50
+pix535# copy ?
+Usage:  copy capture:<capture-name> tftp://<location>/<pathname> [pcap]
+        copy http[s]://[<user>:<password>@]<location>[:<port>]/<pathname>
+                flash[:[image | pdm]]
+        copy tftp[:[[//location][/pathname]]] flash[:[image | pdm]]
+pix535# copy flash:pdm tftp://172.31.0.50
+Usage:  copy capture:<capture-name> tftp://<location>/<pathname> [pcap]
+        copy http[s]://[<user>:<password>@]<location>[:<port>]/<pathname>
+                flash[:[image | pdm]]
+        copy tftp[:[[//location][/pathname]]] flash[:[image | pdm]]
+pix535# show ?
+
+At the end of show <command>, use the pipe character '|' followed by:
+begin|include|exclude|grep [-v] <regular_exp>, to filter show output.
+
+aaa             Enable, disable, or view TACACS+, RADIUS or LOCAL
+                user authentication, authorization and accounting
+aaa-server      Define AAA Server group
+access-group    Bind an access-list to an interface to filter inbound traffic
+access-list     Add an access list
+activation-key  Modify activation-key.
+age             This command is deprecated. See ipsec, isakmp, map, ca commands
+alias           Administer overlapping addresses with dual NAT.
+apply           Apply outbound lists to source or destination IP addresses
+arp             Change or view arp table, set arp timeout value, view statistics
+auth-prompt     Customize authentication challenge, reject or acceptance prompt
+auto-update     Configure auto update support
+banner          Configure login/session banners
+blocks          Show system buffer utilization
+ca              CEP (Certificate Enrollment Protocol)
+                Create and enroll RSA key pairs into a PKI
+                (Public Key Infrastructure).
+capture         Capture inbound and outbound packets on one or more interfaces
+checksum        View configuration information cryptochecksum
+chunkstat       Display chunk stats
+clock           Show and set the date and time of PIX
+conduit         Add conduit access to higher security level network or ICMP
+configure       Configure from terminal, floppy, memory, network, or
+                factory-default.  The configuration will be merged with the
+                active configuration except for factory-default in which case
+                the active configuration is cleared first.
+conn            Display connection information
+console         Set idle timeout for the serial console of the PIX
+cpu             Display cpu usage
+Crashinfo       Read, write and configure crash write to flash. Force a crash.
+crypto          Configure IPsec, IKE, and CA
+ctiqbe          Show the current data stored for each CTIQBE session.
+curpriv         Display current privilege level
+debug           Debug packets or ICMP tracings through the PIX Firewall.
+dhcpd           Configure DHCP Server
+dhcprelay       Configure DHCP Relay Agent
+domain-name     Change domain name
+dynamic-map     Specify a dynamic crypto map template
+eeprom          show or reprogram the 525 onboard i82559 devices
+enable          Configure enable passwords
+established     Allow inbound connections based on established connections
+failover        Enable/disable PIX failover feature to a standby PIX
+filter          Enable, disable, or view URL, FTP, HTTPS, Java, and ActiveX filt
+ering
+fixup           Add or delete PIX service and feature defaults
+flashfs         Show, destroy, or preserve filesystem information
+fragment        Configure the IP fragment database
+global          Specify, delete or view global address pools,
+                or designate a PAT(Port Address Translated) address
+h225            Show the current h225 data stored for each connection.
+h245            List the h245 connections.
+h323-ras        Show the current h323 ras data stored for each connection.
+history         Display the session command history
+http            Configure HTTP server
+icmp            Configure access for ICMP traffic that terminates at an interfac
+e
+interface       Set network interface paremeters and configure VLANs
+igmp            Clear or display IGMP groups
+ip              Set the ip address and mask for an interface
+                Define a local address pool
+                Configure Unicast RPF on an interface
+                Configure the Intrusion Detection System
+ipsec           Configure IPSEC policy
+isakmp          Configure ISAKMP policy
+local-host      Display or clear the local host network information
+logging         Enable logging facility
+mac-list        Add a list of mac addresses using first match search
+map             Configure IPsec crypto map
+memory          System memory utilization
+mgcp            Configure the Media Gateway Control Protocol fixup
+management-access       Enable access to internal management interface
+mroute          Configure a multicast route
+mtu             Specify MTU(Maximum Transmission Unit) for an interface
+multicast       Configure multicast on an interface
+name            Associate a name with an IP address
+nameif          Assign a name to an interface
+names           Enable, disable or display IP address to name conversion
+nat             Associate a network with a pool of global IP addresses
+ntp             Configure Network Time Protocol
+object-group    Create an object group for use in 'access-list', 'conduit', etc
+ospf            Show OSPF information or clear ospf items.
+outbound        Create an outbound access list
+pager           Control page length for pagination
+passwd          Change Telnet console access password
+pdm             Configure PIX Device Manager
+prefix-list     Configure a prefix-list
+privilege       Configure/Display privilege levels for commands
+processes       Display processes
+rip             Broadcast default route or passive RIP
+route           Enter a static route for an interface
+route-map       Create a route-map.
+router          Create/configure OSPF routing process
+routing         Configure interface specific unicast routing parameters.
+running-config  Display the current running configuration
+service         Enable system services
+shun            Manages the filtering of packets from undesired hosts
+sip             Show the current data stored for each SIP session.
+skinny          Show the current data stored for each Skinny session.
+snmp-server     Provide SNMP and event information
+ssh             Add SSH access to PIX console, set idle timeout, display
+                list of active SSH sessions & terminate a SSH session
+startup-config  Display the startup configuration
+static          Configure one-to-one address translation rule
+sysopt          Set system functional option
+tcpstat         Display status of tcp stack and tcp connections
+tech-support    Tech support
+telnet          Add telnet access to PIX console and set idle timeout
+terminal        Set terminal line parameters
+tftp-server     Specify default TFTP server address and directory
+timeout         Set the maximum idle times
+traffic         Counters for traffic statistics
+uauth           Display or clear current user authorization information
+url-cache       Enable URL caching
+url-block       Enable URL pending block buffer and long URL support
+url-server      Specify a URL filter server
+username        Configure user authentication local database
+version         Display PIX system software version
+virtual         Set address for authentication virtual servers
+vpdn            Configure VPDN (PPTP, L2TP, PPPoE) Policy
+vpnclient       Configure Easy VPN Remote
+vpngroup        Configure group settings for Cisco VPN Clients and
+                Cisco Easy VPN Remote products
+who             Show active administration sessions on PIX
+xlate           Display current translation and connection slot information
+pix535# show  ?
+
+At the end of show <command>, use the pipe character '|' followed by:
+begin|include|exclude|grep [-v] <regular_exp>, to filter show output.
+
+aaa             Enable, disable, or view TACACS+, RADIUS or LOCAL
+                user authentication, authorization and accounting
+aaa-server      Define AAA Server group
+access-group    Bind an access-list to an interface to filter inbound traffic
+access-list     Add an access list
+activation-key  Modify activation-key.
+age             This command is deprecated. See ipsec, isakmp, map, ca commands
+alias           Administer overlapping addresses with dual NAT.
+apply           Apply outbound lists to source or destination IP addresses
+arp             Change or view arp table, set arp timeout value, view statistics
+auth-prompt     Customize authentication challenge, reject or acceptance prompt
+auto-update     Configure auto update support
+banner          Configure login/session banners
+blocks          Show system buffer utilization
+ca              CEP (Certificate Enrollment Protocol)
+                Create and enroll RSA key pairs into a PKI
+                (Public Key Infrastructure).
+capture         Capture inbound and outbound packets on one or more interfaces
+checksum        View configuration information cryptochecksum
+chunkstat       Display chunk stats
+clock           Show and set the date and time of PIX
+conduit         Add conduit access to higher security level network or ICMP
+configure       Configure from terminal, floppy, memory, network, or
+                factory-default.  The configuration will be merged with the
+                active configuration except for factory-default in which case
+                the active configuration is cleared first.
+conn            Display connection information
+console         Set idle timeout for the serial console of the PIX
+cpu             Display cpu usage
+Crashinfo       Read, write and configure crash write to flash. Force a crash.
+crypto          Configure IPsec, IKE, and CA
+ctiqbe          Show the current data stored for each CTIQBE session.
+curpriv         Display current privilege level
+debug           Debug packets or ICMP tracings through the PIX Firewall.
+dhcpd           Configure DHCP Server
+dhcprelay       Configure DHCP Relay Agent
+domain-name     Change domain name
+dynamic-map     Specify a dynamic crypto map template
+eeprom          show or reprogram the 525 onboard i82559 devices
+enable          Configure enable passwords
+established     Allow inbound connections based on established connections
+failover        Enable/disable PIX failover feature to a standby PIX
+filter          Enable, disable, or view URL, FTP, HTTPS, Java, and ActiveX filt
+ering
+fixup           Add or delete PIX service and feature defaults
+flashfs         Show, destroy, or preserve filesystem information
+fragment        Configure the IP fragment database
+global          Specify, delete or view global address pools,
+                or designate a PAT(Port Address Translated) address
+h225            Show the current h225 data stored for each connection.
+h245            List the h245 connections.
+h323-ras        Show the current h323 ras data stored for each connection.
+history         Display the session command history
+http            Configure HTTP server
+icmp            Configure access for ICMP traffic that terminates at an interfac
+e
+interface       Set network interface paremeters and configure VLANs
+igmp            Clear or display IGMP groups
+ip              Set the ip address and mask for an interface
+                Define a local address pool
+                Configure Unicast RPF on an interface
+                Configure the Intrusion Detection System
+ipsec           Configure IPSEC policy
+isakmp          Configure ISAKMP policy
+local-host      Display or clear the local host network information
+logging         Enable logging facility
+mac-list        Add a list of mac addresses using first match search
+map             Configure IPsec crypto map
+memory          System memory utilization
+mgcp            Configure the Media Gateway Control Protocol fixup
+management-access       Enable access to internal management interface
+mroute          Configure a multicast route
+mtu             Specify MTU(Maximum Transmission Unit) for an interface
+multicast       Configure multicast on an interface
+name            Associate a name with an IP address
+nameif          Assign a name to an interface
+names           Enable, disable or display IP address to name conversion
+nat             Associate a network with a pool of global IP addresses
+ntp             Configure Network Time Protocol
+object-group    Create an object group for use in 'access-list', 'conduit', etc
+ospf            Show OSPF information or clear ospf items.
+outbound        Create an outbound access list
+pager           Control page length for pagination
+passwd          Change Telnet console access password
+pdm             Configure PIX Device Manager
+prefix-list     Configure a prefix-list
+privilege       Configure/Display privilege levels for commands
+processes       Display processes
+rip             Broadcast default route or passive RIP
+route           Enter a static route for an interface
+route-map       Create a route-map.
+router          Create/configure OSPF routing process
+routing         Configure interface specific unicast routing parameters.
+running-config  Display the current running configuration
+service         Enable system services
+shun            Manages the filtering of packets from undesired hosts
+sip             Show the current data stored for each SIP session.
+skinny          Show the current data stored for each Skinny session.
+snmp-server     Provide SNMP and event information
+ssh             Add SSH access to PIX console, set idle timeout, display
+                list of active SSH sessions & terminate a SSH session
+startup-config  Display the startup configuration
+static          Configure one-to-one address translation rule
+sysopt          Set system functional option
+tcpstat         Display status of tcp stack and tcp connections
+tech-support    Tech support
+telnet          Add telnet access to PIX console and set idle timeout
+terminal        Set terminal line parameters
+tftp-server     Specify default TFTP server address and directory
+timeout         Set the maximum idle times
+traffic         Counters for traffic statistics
+uauth           Display or clear current user authorization information
+url-cache       Enable URL caching
+url-block       Enable URL pending block buffer and long URL support
+url-server      Specify a URL filter server
+username        Configure user authentication local database
+version         Display PIX system software version
+virtual         Set address for authentication virtual servers
+vpdn            Configure VPDN (PPTP, L2TP, PPPoE) Policy
+vpnclient       Configure Easy VPN Remote
+vpngroup        Configure group settings for Cisco VPN Clients and
+                Cisco Easy VPN Remote products
+who             Show active administration sessions on PIX
+xlate           Display current translation and connection slot information
+pix535# show  config
+: Saved
+: Written by enable_15 at 22:41:37.693 UTC Thu May 27 2004
+PIX Version 6.3(1)
+interface ethernet0 auto
+interface ethernet1 auto
+nameif ethernet0 outside security0
+nameif ethernet1 inside security100
+enable password 2KFQnbNIdI.2KYOU encrypted
+passwd 2KFQnbNIdI.2KYOU encrypted
+hostname pix535
+domain-name test
+fixup protocol ftp 21
+fixup protocol h323 h225 1720
+fixup protocol h323 ras 1718-1719
+fixup protocol http 80
+fixup protocol ils 389
+fixup protocol pptp 1723
+fixup protocol rsh 514
+fixup protocol rtsp 554
+fixup protocol sip 5060
+fixup protocol sip udp 5060
+fixup protocol skinny 2000
+fixup protocol smtp 25
+fixup protocol sqlnet 1521
+<--- More --->
+
+access-group    Bind an access-list to an interface to filter inbound traffic
+access-list     Add an access list
+activation-key  Modify activation-key.
+age             This command is deprecated. See ipsec, isakmp, map, ca commands
+alias           Administer overlapping addresses with dual NAT.
+apply           Apply outbound lists to source or destination IP addresses
+arp             Change or view arp table, set arp timeout value, view statistics
+auth-prompt     Customize authentication challenge, reject or acceptance prompt
+auto-update     Configure auto update support
+banner          Configure login/session banners
+blocks          Show system buffer utilization
+ca              CEP (Certificate Enrollment Protocol)
+                Create and enroll RSA key pairs into a PKI
+                (Public Key Infrastructure).
+capture         Capture inbound and outbound packets on one or more interfaces
+checksum        View configuration information cryptochecksum
+chunkstat       Display chunk stats
+clock           Show and set the date and time of PIX
+conduit         Add conduit access to higher security level network or ICMP
+configure       Configure from terminal, floppy, memory, network, or
+                factory-default.  The configuration will be merged with the
+                active configuration except for factory-default in which case
+                the active configuration is cleared first.
+conn            Display connection information
+console         Set idle timeout for the serial console of the PIX
+cpu             Display cpu usage
+Crashinfo       Read, write and configure crash write to flash. Force a crash.
+crypto          Configure IPsec, IKE, and CA
+ctiqbe          Show the current data stored for each CTIQBE session.
+curpriv         Display current privilege level
+debug           Debug packets or ICMP tracings through the PIX Firewall.
+dhcpd           Configure DHCP Server
+dhcprelay       Configure DHCP Relay Agent
+domain-name     Change domain name
+dynamic-map     Specify a dynamic crypto map template
+eeprom          show or reprogram the 525 onboard i82559 devices
+enable          Configure enable passwords
+established     Allow inbound connections based on established connections
+failover        Enable/disable PIX failover feature to a standby PIX
+filter          Enable, disable, or view URL, FTP, HTTPS, Java, and ActiveX filt
+ering
+fixup           Add or delete PIX service and feature defaults
+flashfs         Show, destroy, or preserve filesystem information
+fragment        Configure the IP fragment database
+global          Specify, delete or view global address pools,
+                or designate a PAT(Port Address Translated) address
+h225            Show the current h225 data stored for each connection.
+h245            List the h245 connections.
+h323-ras        Show the current h323 ras data stored for each connection.
+history         Display the session command history
+http            Configure HTTP server
+icmp            Configure access for ICMP traffic that terminates at an interfac
+e
+interface       Set network interface paremeters and configure VLANs
+igmp            Clear or display IGMP groups
+ip              Set the ip address and mask for an interface
+                Define a local address pool
+                Configure Unicast RPF on an interface
+                Configure the Intrusion Detection System
+ipsec           Configure IPSEC policy
+isakmp          Configure ISAKMP policy
+local-host      Display or clear the local host network information
+logging         Enable logging facility
+mac-list        Add a list of mac addresses using first match search
+map             Configure IPsec crypto map
+memory          System memory utilization
+mgcp            Configure the Media Gateway Control Protocol fixup
+management-access       Enable access to internal management interface
+mroute          Configure a multicast route
+mtu             Specify MTU(Maximum Transmission Unit) for an interface
+multicast       Configure multicast on an interface
+name            Associate a name with an IP address
+nameif          Assign a name to an interface
+names           Enable, disable or display IP address to name conversion
+nat             Associate a network with a pool of global IP addresses
+ntp             Configure Network Time Protocol
+object-group    Create an object group for use in 'access-list', 'conduit', etc
+ospf            Show OSPF information or clear ospf items.
+outbound        Create an outbound access list
+pager           Control page length for pagination
+passwd          Change Telnet console access password
+pdm             Configure PIX Device Manager
+prefix-list     Configure a prefix-list
+privilege       Configure/Display privilege levels for commands
+processes       Display processes
+rip             Broadcast default route or passive RIP
+route           Enter a static route for an interface
+route-map       Create a route-map.
+router          Create/configure OSPF routing process
+routing         Configure interface specific unicast routing parameters.
+running-config  Display the current running configuration
+service         Enable system services
+shun            Manages the filtering of packets from undesired hosts
+sip             Show the current data stored for each SIP session.
+skinny          Show the current data stored for each Skinny session.
+snmp-server     Provide SNMP and event information
+ssh             Add SSH access to PIX console, set idle timeout, display
+                list of active SSH sessions & terminate a SSH session
+startup-config  Display the startup configuration
+static          Configure one-to-one address translation rule
+sysopt          Set system functional option
+tcpstat         Display status of tcp stack and tcp connections
+tech-support    Tech support
+telnet          Add telnet access to PIX console and set idle timeout
+terminal        Set terminal line parameters
+tftp-server     Specify default TFTP server address and directory
+timeout         Set the maximum idle times
+traffic         Counters for traffic statistics
+uauth           Display or clear current user authorization information
+url-cache       Enable URL caching
+url-block       Enable URL pending block buffer and long URL support
+url-server      Specify a URL filter server
+username        Configure user authentication local database
+version         Display PIX system software version
+virtual         Set address for authentication virtual servers
+vpdn            Configure VPDN (PPTP, L2TP, PPPoE) Policy
+vpnclient       Configure Easy VPN Remote
+vpngroup        Configure group settings for Cisco VPN Clients and
+                Cisco Easy VPN Remote products
+who             Show active administration sessions on PIX
+xlate           Display current translation and connection slot information
+pix535# show  ?
+
+At the end of show <command>, use the pipe character '|' followed by:
+begin|include|exclude|grep [-v] <regular_exp>, to filter show output.
+
+aaa             Enable, disable, or view TACACS+, RADIUS or LOCAL
+                user authentication, authorization and accounting
+aaa-server      Define AAA Server group
+access-group    Bind an access-list to an interface to filter inbound traffic
+access-list     Add an access list
+activation-key  Modify activation-key.
+age             This command is deprecated. See ipsec, isakmp, map, ca commands
+alias           Administer overlapping addresses with dual NAT.
+apply           Apply outbound lists to source or destination IP addresses
+arp             Change or view arp table, set arp timeout value, view statistics
+auth-prompt     Customize authentication challenge, reject or acceptance prompt
+auto-update     Configure auto update support
+banner          Configure login/session banners
+blocks          Show system buffer utilization
+ca              CEP (Certificate Enrollment Protocol)
+                Create and enroll RSA key pairs into a PKI
+                (Public Key Infrastructure).
+capture         Capture inbound and outbound packets on one or more interfaces
+checksum        View configuration information cryptochecksum
+chunkstat       Display chunk stats
+clock           Show and set the date and time of PIX
+conduit         Add conduit access to higher security level network or ICMP
+configure       Configure from terminal, floppy, memory, network, or
+                factory-default.  The configuration will be merged with the
+                active configuration except for factory-default in which case
+                the active configuration is cleared first.
+conn            Display connection information
+console         Set idle timeout for the serial console of the PIX
+cpu             Display cpu usage
+Crashinfo       Read, write and configure crash write to flash. Force a crash.
+crypto          Configure IPsec, IKE, and CA
+ctiqbe          Show the current data stored for each CTIQBE session.
+curpriv         Display current privilege level
+debug           Debug packets or ICMP tracings through the PIX Firewall.
+dhcpd           Configure DHCP Server
+dhcprelay       Configure DHCP Relay Agent
+domain-name     Change domain name
+dynamic-map     Specify a dynamic crypto map template
+eeprom          show or reprogram the 525 onboard i82559 devices
+enable          Configure enable passwords
+established     Allow inbound connections based on established connections
+failover        Enable/disable PIX failover feature to a standby PIX
+filter          Enable, disable, or view URL, FTP, HTTPS, Java, and ActiveX filt
+ering
+fixup           Add or delete PIX service and feature defaults
+flashfs         Show, destroy, or preserve filesystem information
+fragment        Configure the IP fragment database
+global          Specify, delete or view global address pools,
+                or designate a PAT(Port Address Translated) address
+h225            Show the current h225 data stored for each connection.
+h245            List the h245 connections.
+h323-ras        Show the current h323 ras data stored for each connection.
+history         Display the session command history
+http            Configure HTTP server
+icmp            Configure access for ICMP traffic that terminates at an interfac
+e
+interface       Set network interface paremeters and configure VLANs
+igmp            Clear or display IGMP groups
+ip              Set the ip address and mask for an interface
+                Define a local address pool
+                Configure Unicast RPF on an interface
+                Configure the Intrusion Detection System
+ipsec           Configure IPSEC policy
+isakmp          Configure ISAKMP policy
+local-host      Display or clear the local host network information
+logging         Enable logging facility
+mac-list        Add a list of mac addresses using first match search
+map             Configure IPsec crypto map
+memory          System memory utilization
+mgcp            Configure the Media Gateway Control Protocol fixup
+management-access       Enable access to internal management interface
+mroute          Configure a multicast route
+mtu             Specify MTU(Maximum Transmission Unit) for an interface
+multicast       Configure multicast on an interface
+name            Associate a name with an IP address
+nameif          Assign a name to an interface
+names           Enable, disable or display IP address to name conversion
+nat             Associate a network with a pool of global IP addresses
+ntp             Configure Network Time Protocol
+object-group    Create an object group for use in 'access-list', 'conduit', etc
+ospf            Show OSPF information or clear ospf items.
+outbound        Create an outbound access list
+pager           Control page length for pagination
+passwd          Change Telnet console access password
+pdm             Configure PIX Device Manager
+prefix-list     Configure a prefix-list
+privilege       Configure/Display privilege levels for commands
+processes       Display processes
+rip             Broadcast default route or passive RIP
+route           Enter a static route for an interface
+route-map       Create a route-map.
+router          Create/configure OSPF routing process
+routing         Configure interface specific unicast routing parameters.
+running-config  Display the current running configuration
+service         Enable system services
+shun            Manages the filtering of packets from undesired hosts
+sip             Show the current data stored for each SIP session.
+skinny          Show the current data stored for each Skinny session.
+snmp-server     Provide SNMP and event information
+ssh             Add SSH access to PIX console, set idle timeout, display
+                list of active SSH sessions & terminate a SSH session
+startup-config  Display the startup configuration
+static          Configure one-to-one address translation rule
+sysopt          Set system functional option
+tcpstat         Display status of tcp stack and tcp connections
+tech-support    Tech support
+telnet          Add telnet access to PIX console and set idle timeout
+terminal        Set terminal line parameters
+tftp-server     Specify default TFTP server address and directory
+timeout         Set the maximum idle times
+traffic         Counters for traffic statistics
+uauth           Display or clear current user authorization information
+url-cache       Enable URL caching
+url-block       Enable URL pending block buffer and long URL support
+url-server      Specify a URL filter server
+username        Configure user authentication local database
+version         Display PIX system software version
+virtual         Set address for authentication virtual servers
+vpdn            Configure VPDN (PPTP, L2TP, PPPoE) Policy
+vpnclient       Configure Easy VPN Remote
+vpngroup        Configure group settings for Cisco VPN Clients and
+                Cisco Easy VPN Remote products
+who             Show active administration sessions on PIX
+xlate           Display current translation and connection slot information
+pix535# show  config
+: Saved
+: Written by enable_15 at 22:41:37.693 UTC Thu May 27 2004
+PIX Version 6.3(1)
+interface ethernet0 auto
+interface ethernet1 auto
+nameif ethernet0 outside security0
+nameif ethernet1 inside security100
+enable password 2KFQnbNIdI.2KYOU encrypted
+passwd 2KFQnbNIdI.2KYOU encrypted
+hostname pix535
+domain-name test
+fixup protocol ftp 21
+fixup protocol h323 h225 1720
+fixup protocol h323 ras 1718-1719
+fixup protocol http 80
+fixup protocol ils 389
+fixup protocol pptp 1723
+fixup protocol rsh 514
+fixup protocol rtsp 554
+fixup protocol sip 5060
+fixup protocol sip udp 5060
+fixup protocol skinny 2000
+fixup protocol smtp 25
+fixup protocol sqlnet 1521
+names
+access-list acl_inside permit ip 192.168.0.0 255.255.0.0 any
+access-list acl_inside permit icmp 192.168.0.0 255.255.0.0 any
+access-list acl_inside permit ip 172.31.0.0 255.255.0.0 any
+access-list acl_inside permit icmp 172.31.0.0 255.255.0.0 any
+access-list acl_inside permit ip 10.0.0.0 255.0.0.0 any
+access-list acl_inside permit icmp 10.0.0.0 255.0.0.0 any
+access-list 110 permit icmp 192.168.1.0 255.255.255.0 192.168.2.0 255.255.255.0
+access-list 110 permit ip 192.168.1.0 255.255.255.0 192.168.2.0 255.255.255.0
+access-list 110 permit icmp 172.31.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+access-list 110 permit ip 172.31.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+access-list 110 permit icmp 10.0.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+access-list 110 permit ip 10.0.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+pager lines 24
+mtu outside 1500
+mtu inside 1500
+ip address outside pppoe setroute
+ip address inside 192.168.1.1 255.255.255.0
+ip audit info action alarm
+ip audit attack action alarm
+ip local pool vpnclientpool 192.168.2.10-192.168.2.40
+no failover
+failover timeout 0:00:00
+failover poll 15
+<--- More --->
+console         Set idle timeout for the serial console of the PIX
+cpu             Display cpu usage
+Crashinfo       Read, write and configure crash write to flash. Force a crash.
+crypto          Configure IPsec, IKE, and CA
+ctiqbe          Show the current data stored for each CTIQBE session.
+curpriv         Display current privilege level
+debug           Debug packets or ICMP tracings through the PIX Firewall.
+dhcpd           Configure DHCP Server
+dhcprelay       Configure DHCP Relay Agent
+domain-name     Change domain name
+dynamic-map     Specify a dynamic crypto map template
+eeprom          show or reprogram the 525 onboard i82559 devices
+enable          Configure enable passwords
+established     Allow inbound connections based on established connections
+failover        Enable/disable PIX failover feature to a standby PIX
+filter          Enable, disable, or view URL, FTP, HTTPS, Java, and ActiveX filt
+ering
+fixup           Add or delete PIX service and feature defaults
+flashfs         Show, destroy, or preserve filesystem information
+fragment        Configure the IP fragment database
+global          Specify, delete or view global address pools,
+                or designate a PAT(Port Address Translated) address
+h225            Show the current h225 data stored for each connection.
+h245            List the h245 connections.
+h323-ras        Show the current h323 ras data stored for each connection.
+history         Display the session command history
+http            Configure HTTP server
+icmp            Configure access for ICMP traffic that terminates at an interfac
+e
+interface       Set network interface paremeters and configure VLANs
+igmp            Clear or display IGMP groups
+ip              Set the ip address and mask for an interface
+                Define a local address pool
+                Configure Unicast RPF on an interface
+                Configure the Intrusion Detection System
+ipsec           Configure IPSEC policy
+isakmp          Configure ISAKMP policy
+local-host      Display or clear the local host network information
+logging         Enable logging facility
+mac-list        Add a list of mac addresses using first match search
+map             Configure IPsec crypto map
+memory          System memory utilization
+mgcp            Configure the Media Gateway Control Protocol fixup
+management-access       Enable access to internal management interface
+mroute          Configure a multicast route
+mtu             Specify MTU(Maximum Transmission Unit) for an interface
+multicast       Configure multicast on an interface
+name            Associate a name with an IP address
+nameif          Assign a name to an interface
+names           Enable, disable or display IP address to name conversion
+nat             Associate a network with a pool of global IP addresses
+ntp             Configure Network Time Protocol
+object-group    Create an object group for use in 'access-list', 'conduit', etc
+ospf            Show OSPF information or clear ospf items.
+outbound        Create an outbound access list
+pager           Control page length for pagination
+passwd          Change Telnet console access password
+pdm             Configure PIX Device Manager
+prefix-list     Configure a prefix-list
+privilege       Configure/Display privilege levels for commands
+processes       Display processes
+rip             Broadcast default route or passive RIP
+route           Enter a static route for an interface
+route-map       Create a route-map.
+router          Create/configure OSPF routing process
+routing         Configure interface specific unicast routing parameters.
+running-config  Display the current running configuration
+service         Enable system services
+shun            Manages the filtering of packets from undesired hosts
+sip             Show the current data stored for each SIP session.
+skinny          Show the current data stored for each Skinny session.
+snmp-server     Provide SNMP and event information
+ssh             Add SSH access to PIX console, set idle timeout, display
+                list of active SSH sessions & terminate a SSH session
+startup-config  Display the startup configuration
+static          Configure one-to-one address translation rule
+sysopt          Set system functional option
+tcpstat         Display status of tcp stack and tcp connections
+tech-support    Tech support
+telnet          Add telnet access to PIX console and set idle timeout
+terminal        Set terminal line parameters
+tftp-server     Specify default TFTP server address and directory
+timeout         Set the maximum idle times
+traffic         Counters for traffic statistics
+uauth           Display or clear current user authorization information
+url-cache       Enable URL caching
+url-block       Enable URL pending block buffer and long URL support
+url-server      Specify a URL filter server
+username        Configure user authentication local database
+version         Display PIX system software version
+virtual         Set address for authentication virtual servers
+vpdn            Configure VPDN (PPTP, L2TP, PPPoE) Policy
+vpnclient       Configure Easy VPN Remote
+vpngroup        Configure group settings for Cisco VPN Clients and
+                Cisco Easy VPN Remote products
+who             Show active administration sessions on PIX
+xlate           Display current translation and connection slot information
+pix535# show  ?
+
+At the end of show <command>, use the pipe character '|' followed by:
+begin|include|exclude|grep [-v] <regular_exp>, to filter show output.
+
+aaa             Enable, disable, or view TACACS+, RADIUS or LOCAL
+                user authentication, authorization and accounting
+aaa-server      Define AAA Server group
+access-group    Bind an access-list to an interface to filter inbound traffic
+access-list     Add an access list
+activation-key  Modify activation-key.
+age             This command is deprecated. See ipsec, isakmp, map, ca commands
+alias           Administer overlapping addresses with dual NAT.
+apply           Apply outbound lists to source or destination IP addresses
+arp             Change or view arp table, set arp timeout value, view statistics
+auth-prompt     Customize authentication challenge, reject or acceptance prompt
+auto-update     Configure auto update support
+banner          Configure login/session banners
+blocks          Show system buffer utilization
+ca              CEP (Certificate Enrollment Protocol)
+                Create and enroll RSA key pairs into a PKI
+                (Public Key Infrastructure).
+capture         Capture inbound and outbound packets on one or more interfaces
+checksum        View configuration information cryptochecksum
+chunkstat       Display chunk stats
+clock           Show and set the date and time of PIX
+conduit         Add conduit access to higher security level network or ICMP
+configure       Configure from terminal, floppy, memory, network, or
+                factory-default.  The configuration will be merged with the
+                active configuration except for factory-default in which case
+                the active configuration is cleared first.
+conn            Display connection information
+console         Set idle timeout for the serial console of the PIX
+cpu             Display cpu usage
+Crashinfo       Read, write and configure crash write to flash. Force a crash.
+crypto          Configure IPsec, IKE, and CA
+ctiqbe          Show the current data stored for each CTIQBE session.
+curpriv         Display current privilege level
+debug           Debug packets or ICMP tracings through the PIX Firewall.
+dhcpd           Configure DHCP Server
+dhcprelay       Configure DHCP Relay Agent
+domain-name     Change domain name
+dynamic-map     Specify a dynamic crypto map template
+eeprom          show or reprogram the 525 onboard i82559 devices
+enable          Configure enable passwords
+established     Allow inbound connections based on established connections
+failover        Enable/disable PIX failover feature to a standby PIX
+filter          Enable, disable, or view URL, FTP, HTTPS, Java, and ActiveX filt
+ering
+fixup           Add or delete PIX service and feature defaults
+flashfs         Show, destroy, or preserve filesystem information
+fragment        Configure the IP fragment database
+global          Specify, delete or view global address pools,
+                or designate a PAT(Port Address Translated) address
+h225            Show the current h225 data stored for each connection.
+h245            List the h245 connections.
+h323-ras        Show the current h323 ras data stored for each connection.
+history         Display the session command history
+http            Configure HTTP server
+icmp            Configure access for ICMP traffic that terminates at an interfac
+e
+interface       Set network interface paremeters and configure VLANs
+igmp            Clear or display IGMP groups
+ip              Set the ip address and mask for an interface
+                Define a local address pool
+                Configure Unicast RPF on an interface
+                Configure the Intrusion Detection System
+ipsec           Configure IPSEC policy
+isakmp          Configure ISAKMP policy
+local-host      Display or clear the local host network information
+logging         Enable logging facility
+mac-list        Add a list of mac addresses using first match search
+map             Configure IPsec crypto map
+memory          System memory utilization
+mgcp            Configure the Media Gateway Control Protocol fixup
+management-access       Enable access to internal management interface
+mroute          Configure a multicast route
+mtu             Specify MTU(Maximum Transmission Unit) for an interface
+multicast       Configure multicast on an interface
+name            Associate a name with an IP address
+nameif          Assign a name to an interface
+names           Enable, disable or display IP address to name conversion
+nat             Associate a network with a pool of global IP addresses
+ntp             Configure Network Time Protocol
+object-group    Create an object group for use in 'access-list', 'conduit', etc
+ospf            Show OSPF information or clear ospf items.
+outbound        Create an outbound access list
+pager           Control page length for pagination
+passwd          Change Telnet console access password
+pdm             Configure PIX Device Manager
+prefix-list     Configure a prefix-list
+privilege       Configure/Display privilege levels for commands
+processes       Display processes
+rip             Broadcast default route or passive RIP
+route           Enter a static route for an interface
+route-map       Create a route-map.
+router          Create/configure OSPF routing process
+routing         Configure interface specific unicast routing parameters.
+running-config  Display the current running configuration
+service         Enable system services
+shun            Manages the filtering of packets from undesired hosts
+sip             Show the current data stored for each SIP session.
+skinny          Show the current data stored for each Skinny session.
+snmp-server     Provide SNMP and event information
+ssh             Add SSH access to PIX console, set idle timeout, display
+                list of active SSH sessions & terminate a SSH session
+startup-config  Display the startup configuration
+static          Configure one-to-one address translation rule
+sysopt          Set system functional option
+tcpstat         Display status of tcp stack and tcp connections
+tech-support    Tech support
+telnet          Add telnet access to PIX console and set idle timeout
+terminal        Set terminal line parameters
+tftp-server     Specify default TFTP server address and directory
+timeout         Set the maximum idle times
+traffic         Counters for traffic statistics
+uauth           Display or clear current user authorization information
+url-cache       Enable URL caching
+url-block       Enable URL pending block buffer and long URL support
+url-server      Specify a URL filter server
+username        Configure user authentication local database
+version         Display PIX system software version
+virtual         Set address for authentication virtual servers
+vpdn            Configure VPDN (PPTP, L2TP, PPPoE) Policy
+vpnclient       Configure Easy VPN Remote
+vpngroup        Configure group settings for Cisco VPN Clients and
+                Cisco Easy VPN Remote products
+who             Show active administration sessions on PIX
+xlate           Display current translation and connection slot information
+pix535# show  config
+: Saved
+: Written by enable_15 at 22:41:37.693 UTC Thu May 27 2004
+PIX Version 6.3(1)
+interface ethernet0 auto
+interface ethernet1 auto
+nameif ethernet0 outside security0
+nameif ethernet1 inside security100
+enable password 2KFQnbNIdI.2KYOU encrypted
+passwd 2KFQnbNIdI.2KYOU encrypted
+hostname pix535
+domain-name test
+fixup protocol ftp 21
+fixup protocol h323 h225 1720
+fixup protocol h323 ras 1718-1719
+fixup protocol http 80
+fixup protocol ils 389
+fixup protocol pptp 1723
+fixup protocol rsh 514
+fixup protocol rtsp 554
+fixup protocol sip 5060
+fixup protocol sip udp 5060
+fixup protocol skinny 2000
+fixup protocol smtp 25
+fixup protocol sqlnet 1521
+names
+access-list acl_inside permit ip 192.168.0.0 255.255.0.0 any
+access-list acl_inside permit icmp 192.168.0.0 255.255.0.0 any
+access-list acl_inside permit ip 172.31.0.0 255.255.0.0 any
+access-list acl_inside permit icmp 172.31.0.0 255.255.0.0 any
+access-list acl_inside permit ip 10.0.0.0 255.0.0.0 any
+access-list acl_inside permit icmp 10.0.0.0 255.0.0.0 any
+access-list 110 permit icmp 192.168.1.0 255.255.255.0 192.168.2.0 255.255.255.0
+access-list 110 permit ip 192.168.1.0 255.255.255.0 192.168.2.0 255.255.255.0
+access-list 110 permit icmp 172.31.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+access-list 110 permit ip 172.31.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+access-list 110 permit icmp 10.0.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+access-list 110 permit ip 10.0.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+pager lines 24
+mtu outside 1500
+mtu inside 1500
+ip address outside pppoe setroute
+ip address inside 192.168.1.1 255.255.255.0
+ip audit info action alarm
+ip audit attack action alarm
+ip local pool vpnclientpool 192.168.2.10-192.168.2.40
+no failover
+failover timeout 0:00:00
+failover poll 15
+no failover ip address outside
+no failover ip address inside
+pdm location 192.168.1.100 255.255.255.255 inside
+pdm history enable
+arp timeout 14400
+global (outside) 10 interface
+nat (inside) 0 access-list 110
+nat (inside) 10 192.168.1.0 255.255.255.0 0 0
+nat (inside) 10 172.31.0.0 255.255.0.0 0 0
+nat (inside) 10 10.0.0.0 255.0.0.0 0 0
+access-group acl_inside in interface inside
+route inside 10.0.0.0 255.0.0.0 192.168.1.254 1
+route inside 172.31.0.0 255.255.0.0 192.168.1.254 1
+timeout xlate 3:00:00
+timeout conn 1:00:00 half-closed 0:10:00 udp 0:02:00 rpc 0:10:00 h225 1:00:00
+timeout h323 0:05:00 mgcp 0:05:00 sip 0:30:00 sip_media 0:02:00
+timeout uauth 0:05:00 absolute
+aaa-server TACACS+ protocol tacacs+
+aaa-server RADIUS protocol radius
+aaa-server LOCAL protocol local
+http server enable
+http 192.168.1.100 255.255.255.255 inside
+http 192.168.1.0 255.255.255.0 inside
+no snmp-server location
+<--- More --->
+h323-ras        Show the current h323 ras data stored for each connection.
+history         Display the session command history
+http            Configure HTTP server
+icmp            Configure access for ICMP traffic that terminates at an interfac
+e
+interface       Set network interface paremeters and configure VLANs
+igmp            Clear or display IGMP groups
+ip              Set the ip address and mask for an interface
+                Define a local address pool
+                Configure Unicast RPF on an interface
+                Configure the Intrusion Detection System
+ipsec           Configure IPSEC policy
+isakmp          Configure ISAKMP policy
+local-host      Display or clear the local host network information
+logging         Enable logging facility
+mac-list        Add a list of mac addresses using first match search
+map             Configure IPsec crypto map
+memory          System memory utilization
+mgcp            Configure the Media Gateway Control Protocol fixup
+management-access       Enable access to internal management interface
+mroute          Configure a multicast route
+mtu             Specify MTU(Maximum Transmission Unit) for an interface
+multicast       Configure multicast on an interface
+name            Associate a name with an IP address
+nameif          Assign a name to an interface
+names           Enable, disable or display IP address to name conversion
+nat             Associate a network with a pool of global IP addresses
+ntp             Configure Network Time Protocol
+object-group    Create an object group for use in 'access-list', 'conduit', etc
+ospf            Show OSPF information or clear ospf items.
+outbound        Create an outbound access list
+pager           Control page length for pagination
+passwd          Change Telnet console access password
+pdm             Configure PIX Device Manager
+prefix-list     Configure a prefix-list
+privilege       Configure/Display privilege levels for commands
+processes       Display processes
+rip             Broadcast default route or passive RIP
+route           Enter a static route for an interface
+route-map       Create a route-map.
+router          Create/configure OSPF routing process
+routing         Configure interface specific unicast routing parameters.
+running-config  Display the current running configuration
+service         Enable system services
+shun            Manages the filtering of packets from undesired hosts
+sip             Show the current data stored for each SIP session.
+skinny          Show the current data stored for each Skinny session.
+snmp-server     Provide SNMP and event information
+ssh             Add SSH access to PIX console, set idle timeout, display
+                list of active SSH sessions & terminate a SSH session
+startup-config  Display the startup configuration
+static          Configure one-to-one address translation rule
+sysopt          Set system functional option
+tcpstat         Display status of tcp stack and tcp connections
+tech-support    Tech support
+telnet          Add telnet access to PIX console and set idle timeout
+terminal        Set terminal line parameters
+tftp-server     Specify default TFTP server address and directory
+timeout         Set the maximum idle times
+traffic         Counters for traffic statistics
+uauth           Display or clear current user authorization information
+url-cache       Enable URL caching
+url-block       Enable URL pending block buffer and long URL support
+url-server      Specify a URL filter server
+username        Configure user authentication local database
+version         Display PIX system software version
+virtual         Set address for authentication virtual servers
+vpdn            Configure VPDN (PPTP, L2TP, PPPoE) Policy
+vpnclient       Configure Easy VPN Remote
+vpngroup        Configure group settings for Cisco VPN Clients and
+                Cisco Easy VPN Remote products
+who             Show active administration sessions on PIX
+xlate           Display current translation and connection slot information
+pix535# show  ?
+
+At the end of show <command>, use the pipe character '|' followed by:
+begin|include|exclude|grep [-v] <regular_exp>, to filter show output.
+
+aaa             Enable, disable, or view TACACS+, RADIUS or LOCAL
+                user authentication, authorization and accounting
+aaa-server      Define AAA Server group
+access-group    Bind an access-list to an interface to filter inbound traffic
+access-list     Add an access list
+activation-key  Modify activation-key.
+age             This command is deprecated. See ipsec, isakmp, map, ca commands
+alias           Administer overlapping addresses with dual NAT.
+apply           Apply outbound lists to source or destination IP addresses
+arp             Change or view arp table, set arp timeout value, view statistics
+auth-prompt     Customize authentication challenge, reject or acceptance prompt
+auto-update     Configure auto update support
+banner          Configure login/session banners
+blocks          Show system buffer utilization
+ca              CEP (Certificate Enrollment Protocol)
+                Create and enroll RSA key pairs into a PKI
+                (Public Key Infrastructure).
+capture         Capture inbound and outbound packets on one or more interfaces
+checksum        View configuration information cryptochecksum
+chunkstat       Display chunk stats
+clock           Show and set the date and time of PIX
+conduit         Add conduit access to higher security level network or ICMP
+configure       Configure from terminal, floppy, memory, network, or
+                factory-default.  The configuration will be merged with the
+                active configuration except for factory-default in which case
+                the active configuration is cleared first.
+conn            Display connection information
+console         Set idle timeout for the serial console of the PIX
+cpu             Display cpu usage
+Crashinfo       Read, write and configure crash write to flash. Force a crash.
+crypto          Configure IPsec, IKE, and CA
+ctiqbe          Show the current data stored for each CTIQBE session.
+curpriv         Display current privilege level
+debug           Debug packets or ICMP tracings through the PIX Firewall.
+dhcpd           Configure DHCP Server
+dhcprelay       Configure DHCP Relay Agent
+domain-name     Change domain name
+dynamic-map     Specify a dynamic crypto map template
+eeprom          show or reprogram the 525 onboard i82559 devices
+enable          Configure enable passwords
+established     Allow inbound connections based on established connections
+failover        Enable/disable PIX failover feature to a standby PIX
+filter          Enable, disable, or view URL, FTP, HTTPS, Java, and ActiveX filt
+ering
+fixup           Add or delete PIX service and feature defaults
+flashfs         Show, destroy, or preserve filesystem information
+fragment        Configure the IP fragment database
+global          Specify, delete or view global address pools,
+                or designate a PAT(Port Address Translated) address
+h225            Show the current h225 data stored for each connection.
+h245            List the h245 connections.
+h323-ras        Show the current h323 ras data stored for each connection.
+history         Display the session command history
+http            Configure HTTP server
+icmp            Configure access for ICMP traffic that terminates at an interfac
+e
+interface       Set network interface paremeters and configure VLANs
+igmp            Clear or display IGMP groups
+ip              Set the ip address and mask for an interface
+                Define a local address pool
+                Configure Unicast RPF on an interface
+                Configure the Intrusion Detection System
+ipsec           Configure IPSEC policy
+isakmp          Configure ISAKMP policy
+local-host      Display or clear the local host network information
+logging         Enable logging facility
+mac-list        Add a list of mac addresses using first match search
+map             Configure IPsec crypto map
+memory          System memory utilization
+mgcp            Configure the Media Gateway Control Protocol fixup
+management-access       Enable access to internal management interface
+mroute          Configure a multicast route
+mtu             Specify MTU(Maximum Transmission Unit) for an interface
+multicast       Configure multicast on an interface
+name            Associate a name with an IP address
+nameif          Assign a name to an interface
+names           Enable, disable or display IP address to name conversion
+nat             Associate a network with a pool of global IP addresses
+ntp             Configure Network Time Protocol
+object-group    Create an object group for use in 'access-list', 'conduit', etc
+ospf            Show OSPF information or clear ospf items.
+outbound        Create an outbound access list
+pager           Control page length for pagination
+passwd          Change Telnet console access password
+pdm             Configure PIX Device Manager
+prefix-list     Configure a prefix-list
+privilege       Configure/Display privilege levels for commands
+processes       Display processes
+rip             Broadcast default route or passive RIP
+route           Enter a static route for an interface
+route-map       Create a route-map.
+router          Create/configure OSPF routing process
+routing         Configure interface specific unicast routing parameters.
+running-config  Display the current running configuration
+service         Enable system services
+shun            Manages the filtering of packets from undesired hosts
+sip             Show the current data stored for each SIP session.
+skinny          Show the current data stored for each Skinny session.
+snmp-server     Provide SNMP and event information
+ssh             Add SSH access to PIX console, set idle timeout, display
+                list of active SSH sessions & terminate a SSH session
+startup-config  Display the startup configuration
+static          Configure one-to-one address translation rule
+sysopt          Set system functional option
+tcpstat         Display status of tcp stack and tcp connections
+tech-support    Tech support
+telnet          Add telnet access to PIX console and set idle timeout
+terminal        Set terminal line parameters
+tftp-server     Specify default TFTP server address and directory
+timeout         Set the maximum idle times
+traffic         Counters for traffic statistics
+uauth           Display or clear current user authorization information
+url-cache       Enable URL caching
+url-block       Enable URL pending block buffer and long URL support
+url-server      Specify a URL filter server
+username        Configure user authentication local database
+version         Display PIX system software version
+virtual         Set address for authentication virtual servers
+vpdn            Configure VPDN (PPTP, L2TP, PPPoE) Policy
+vpnclient       Configure Easy VPN Remote
+vpngroup        Configure group settings for Cisco VPN Clients and
+                Cisco Easy VPN Remote products
+who             Show active administration sessions on PIX
+xlate           Display current translation and connection slot information
+pix535# show  config
+: Saved
+: Written by enable_15 at 22:41:37.693 UTC Thu May 27 2004
+PIX Version 6.3(1)
+interface ethernet0 auto
+interface ethernet1 auto
+nameif ethernet0 outside security0
+nameif ethernet1 inside security100
+enable password 2KFQnbNIdI.2KYOU encrypted
+passwd 2KFQnbNIdI.2KYOU encrypted
+hostname pix535
+domain-name test
+fixup protocol ftp 21
+fixup protocol h323 h225 1720
+fixup protocol h323 ras 1718-1719
+fixup protocol http 80
+fixup protocol ils 389
+fixup protocol pptp 1723
+fixup protocol rsh 514
+fixup protocol rtsp 554
+fixup protocol sip 5060
+fixup protocol sip udp 5060
+fixup protocol skinny 2000
+fixup protocol smtp 25
+fixup protocol sqlnet 1521
+names
+access-list acl_inside permit ip 192.168.0.0 255.255.0.0 any
+access-list acl_inside permit icmp 192.168.0.0 255.255.0.0 any
+access-list acl_inside permit ip 172.31.0.0 255.255.0.0 any
+access-list acl_inside permit icmp 172.31.0.0 255.255.0.0 any
+access-list acl_inside permit ip 10.0.0.0 255.0.0.0 any
+access-list acl_inside permit icmp 10.0.0.0 255.0.0.0 any
+access-list 110 permit icmp 192.168.1.0 255.255.255.0 192.168.2.0 255.255.255.0
+access-list 110 permit ip 192.168.1.0 255.255.255.0 192.168.2.0 255.255.255.0
+access-list 110 permit icmp 172.31.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+access-list 110 permit ip 172.31.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+access-list 110 permit icmp 10.0.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+access-list 110 permit ip 10.0.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+pager lines 24
+mtu outside 1500
+mtu inside 1500
+ip address outside pppoe setroute
+ip address inside 192.168.1.1 255.255.255.0
+ip audit info action alarm
+ip audit attack action alarm
+ip local pool vpnclientpool 192.168.2.10-192.168.2.40
+no failover
+failover timeout 0:00:00
+failover poll 15
+no failover ip address outside
+no failover ip address inside
+pdm location 192.168.1.100 255.255.255.255 inside
+pdm history enable
+arp timeout 14400
+global (outside) 10 interface
+nat (inside) 0 access-list 110
+nat (inside) 10 192.168.1.0 255.255.255.0 0 0
+nat (inside) 10 172.31.0.0 255.255.0.0 0 0
+nat (inside) 10 10.0.0.0 255.0.0.0 0 0
+access-group acl_inside in interface inside
+route inside 10.0.0.0 255.0.0.0 192.168.1.254 1
+route inside 172.31.0.0 255.255.0.0 192.168.1.254 1
+timeout xlate 3:00:00
+timeout conn 1:00:00 half-closed 0:10:00 udp 0:02:00 rpc 0:10:00 h225 1:00:00
+timeout h323 0:05:00 mgcp 0:05:00 sip 0:30:00 sip_media 0:02:00
+timeout uauth 0:05:00 absolute
+aaa-server TACACS+ protocol tacacs+
+aaa-server RADIUS protocol radius
+aaa-server LOCAL protocol local
+http server enable
+http 192.168.1.100 255.255.255.255 inside
+http 192.168.1.0 255.255.255.0 inside
+no snmp-server location
+no snmp-server contact
+snmp-server community public
+no snmp-server enable traps
+floodguard enable
+sysopt connection permit-ipsec
+crypto ipsec transform-set myset esp-des esp-md5-hmac
+crypto dynamic-map cisco 100 set transform-set myset
+crypto map dyn-map 100 ipsec-isakmp dynamic cisco
+crypto map dyn-map interface outside
+isakmp enable outside
+isakmp key ******** address 0.0.0.0 netmask 0.0.0.0
+isakmp identity address
+isakmp nat-traversal 20
+isakmp policy 20 authentication pre-share
+isakmp policy 20 encryption des
+isakmp policy 20 hash md5
+isakmp policy 20 group 2
+isakmp policy 20 lifetime 86400
+vpngroup china-vpnclient address-pool vpnclientpool
+vpngroup china-vpnclient split-tunnel 110
+vpngroup china-vpnclient idle-time 1800
+vpngroup china-vpnclient password ********
+telnet 192.168.0.0 255.255.0.0 inside
+telnet 172.31.0.0 255.255.0.0 inside
+<--- More --->
+h323-ras        Show the current h323 ras data stored for each connection.
+history         Display the session command history
+http            Configure HTTP server
+icmp            Configure access for ICMP traffic that terminates at an interfac
+e
+interface       Set network interface paremeters and configure VLANs
+igmp            Clear or display IGMP groups
+ip              Set the ip address and mask for an interface
+                Define a local address pool
+                Configure Unicast RPF on an interface
+                Configure the Intrusion Detection System
+ipsec           Configure IPSEC policy
+isakmp          Configure ISAKMP policy
+local-host      Display or clear the local host network information
+logging         Enable logging facility
+mac-list        Add a list of mac addresses using first match search
+map             Configure IPsec crypto map
+memory          System memory utilization
+mgcp            Configure the Media Gateway Control Protocol fixup
+management-access       Enable access to internal management interface
+mroute          Configure a multicast route
+mtu             Specify MTU(Maximum Transmission Unit) for an interface
+multicast       Configure multicast on an interface
+name            Associate a name with an IP address
+nameif          Assign a name to an interface
+names           Enable, disable or display IP address to name conversion
+nat             Associate a network with a pool of global IP addresses
+ntp             Configure Network Time Protocol
+object-group    Create an object group for use in 'access-list', 'conduit', etc
+ospf            Show OSPF information or clear ospf items.
+outbound        Create an outbound access list
+pager           Control page length for pagination
+passwd          Change Telnet console access password
+pdm             Configure PIX Device Manager
+prefix-list     Configure a prefix-list
+privilege       Configure/Display privilege levels for commands
+processes       Display processes
+rip             Broadcast default route or passive RIP
+route           Enter a static route for an interface
+route-map       Create a route-map.
+router          Create/configure OSPF routing process
+routing         Configure interface specific unicast routing parameters.
+running-config  Display the current running configuration
+service         Enable system services
+shun            Manages the filtering of packets from undesired hosts
+sip             Show the current data stored for each SIP session.
+skinny          Show the current data stored for each Skinny session.
+snmp-server     Provide SNMP and event information
+ssh             Add SSH access to PIX console, set idle timeout, display
+                list of active SSH sessions & terminate a SSH session
+startup-config  Display the startup configuration
+static          Configure one-to-one address translation rule
+sysopt          Set system functional option
+tcpstat         Display status of tcp stack and tcp connections
+tech-support    Tech support
+telnet          Add telnet access to PIX console and set idle timeout
+terminal        Set terminal line parameters
+tftp-server     Specify default TFTP server address and directory
+timeout         Set the maximum idle times
+traffic         Counters for traffic statistics
+uauth           Display or clear current user authorization information
+url-cache       Enable URL caching
+url-block       Enable URL pending block buffer and long URL support
+url-server      Specify a URL filter server
+username        Configure user authentication local database
+version         Display PIX system software version
+virtual         Set address for authentication virtual servers
+vpdn            Configure VPDN (PPTP, L2TP, PPPoE) Policy
+vpnclient       Configure Easy VPN Remote
+vpngroup        Configure group settings for Cisco VPN Clients and
+                Cisco Easy VPN Remote products
+who             Show active administration sessions on PIX
+xlate           Display current translation and connection slot information
+pix535# show  ?
+
+At the end of show <command>, use the pipe character '|' followed by:
+begin|include|exclude|grep [-v] <regular_exp>, to filter show output.
+
+aaa             Enable, disable, or view TACACS+, RADIUS or LOCAL
+                user authentication, authorization and accounting
+aaa-server      Define AAA Server group
+access-group    Bind an access-list to an interface to filter inbound traffic
+access-list     Add an access list
+activation-key  Modify activation-key.
+age             This command is deprecated. See ipsec, isakmp, map, ca commands
+alias           Administer overlapping addresses with dual NAT.
+apply           Apply outbound lists to source or destination IP addresses
+arp             Change or view arp table, set arp timeout value, view statistics
+auth-prompt     Customize authentication challenge, reject or acceptance prompt
+auto-update     Configure auto update support
+banner          Configure login/session banners
+blocks          Show system buffer utilization
+ca              CEP (Certificate Enrollment Protocol)
+                Create and enroll RSA key pairs into a PKI
+                (Public Key Infrastructure).
+capture         Capture inbound and outbound packets on one or more interfaces
+checksum        View configuration information cryptochecksum
+chunkstat       Display chunk stats
+clock           Show and set the date and time of PIX
+conduit         Add conduit access to higher security level network or ICMP
+configure       Configure from terminal, floppy, memory, network, or
+                factory-default.  The configuration will be merged with the
+                active configuration except for factory-default in which case
+                the active configuration is cleared first.
+conn            Display connection information
+console         Set idle timeout for the serial console of the PIX
+cpu             Display cpu usage
+Crashinfo       Read, write and configure crash write to flash. Force a crash.
+crypto          Configure IPsec, IKE, and CA
+ctiqbe          Show the current data stored for each CTIQBE session.
+curpriv         Display current privilege level
+debug           Debug packets or ICMP tracings through the PIX Firewall.
+dhcpd           Configure DHCP Server
+dhcprelay       Configure DHCP Relay Agent
+domain-name     Change domain name
+dynamic-map     Specify a dynamic crypto map template
+eeprom          show or reprogram the 525 onboard i82559 devices
+enable          Configure enable passwords
+established     Allow inbound connections based on established connections
+failover        Enable/disable PIX failover feature to a standby PIX
+filter          Enable, disable, or view URL, FTP, HTTPS, Java, and ActiveX filt
+ering
+fixup           Add or delete PIX service and feature defaults
+flashfs         Show, destroy, or preserve filesystem information
+fragment        Configure the IP fragment database
+global          Specify, delete or view global address pools,
+                or designate a PAT(Port Address Translated) address
+h225            Show the current h225 data stored for each connection.
+h245            List the h245 connections.
+h323-ras        Show the current h323 ras data stored for each connection.
+history         Display the session command history
+http            Configure HTTP server
+icmp            Configure access for ICMP traffic that terminates at an interfac
+e
+interface       Set network interface paremeters and configure VLANs
+igmp            Clear or display IGMP groups
+ip              Set the ip address and mask for an interface
+                Define a local address pool
+                Configure Unicast RPF on an interface
+                Configure the Intrusion Detection System
+ipsec           Configure IPSEC policy
+isakmp          Configure ISAKMP policy
+local-host      Display or clear the local host network information
+logging         Enable logging facility
+mac-list        Add a list of mac addresses using first match search
+map             Configure IPsec crypto map
+memory          System memory utilization
+mgcp            Configure the Media Gateway Control Protocol fixup
+management-access       Enable access to internal management interface
+mroute          Configure a multicast route
+mtu             Specify MTU(Maximum Transmission Unit) for an interface
+multicast       Configure multicast on an interface
+name            Associate a name with an IP address
+nameif          Assign a name to an interface
+names           Enable, disable or display IP address to name conversion
+nat             Associate a network with a pool of global IP addresses
+ntp             Configure Network Time Protocol
+object-group    Create an object group for use in 'access-list', 'conduit', etc
+ospf            Show OSPF information or clear ospf items.
+outbound        Create an outbound access list
+pager           Control page length for pagination
+passwd          Change Telnet console access password
+pdm             Configure PIX Device Manager
+prefix-list     Configure a prefix-list
+privilege       Configure/Display privilege levels for commands
+processes       Display processes
+rip             Broadcast default route or passive RIP
+route           Enter a static route for an interface
+route-map       Create a route-map.
+router          Create/configure OSPF routing process
+routing         Configure interface specific unicast routing parameters.
+running-config  Display the current running configuration
+service         Enable system services
+shun            Manages the filtering of packets from undesired hosts
+sip             Show the current data stored for each SIP session.
+skinny          Show the current data stored for each Skinny session.
+snmp-server     Provide SNMP and event information
+ssh             Add SSH access to PIX console, set idle timeout, display
+                list of active SSH sessions & terminate a SSH session
+startup-config  Display the startup configuration
+static          Configure one-to-one address translation rule
+sysopt          Set system functional option
+tcpstat         Display status of tcp stack and tcp connections
+tech-support    Tech support
+telnet          Add telnet access to PIX console and set idle timeout
+terminal        Set terminal line parameters
+tftp-server     Specify default TFTP server address and directory
+timeout         Set the maximum idle times
+traffic         Counters for traffic statistics
+uauth           Display or clear current user authorization information
+url-cache       Enable URL caching
+url-block       Enable URL pending block buffer and long URL support
+url-server      Specify a URL filter server
+username        Configure user authentication local database
+version         Display PIX system software version
+virtual         Set address for authentication virtual servers
+vpdn            Configure VPDN (PPTP, L2TP, PPPoE) Policy
+vpnclient       Configure Easy VPN Remote
+vpngroup        Configure group settings for Cisco VPN Clients and
+                Cisco Easy VPN Remote products
+who             Show active administration sessions on PIX
+xlate           Display current translation and connection slot information
+pix535# show  config
+: Saved
+: Written by enable_15 at 22:41:37.693 UTC Thu May 27 2004
+PIX Version 6.3(1)
+interface ethernet0 auto
+interface ethernet1 auto
+nameif ethernet0 outside security0
+nameif ethernet1 inside security100
+enable password 2KFQnbNIdI.2KYOU encrypted
+passwd 2KFQnbNIdI.2KYOU encrypted
+hostname pix535
+domain-name test
+fixup protocol ftp 21
+fixup protocol h323 h225 1720
+fixup protocol h323 ras 1718-1719
+fixup protocol http 80
+fixup protocol ils 389
+fixup protocol pptp 1723
+fixup protocol rsh 514
+fixup protocol rtsp 554
+fixup protocol sip 5060
+fixup protocol sip udp 5060
+fixup protocol skinny 2000
+fixup protocol smtp 25
+fixup protocol sqlnet 1521
+names
+access-list acl_inside permit ip 192.168.0.0 255.255.0.0 any
+access-list acl_inside permit icmp 192.168.0.0 255.255.0.0 any
+access-list acl_inside permit ip 172.31.0.0 255.255.0.0 any
+access-list acl_inside permit icmp 172.31.0.0 255.255.0.0 any
+access-list acl_inside permit ip 10.0.0.0 255.0.0.0 any
+access-list acl_inside permit icmp 10.0.0.0 255.0.0.0 any
+access-list 110 permit icmp 192.168.1.0 255.255.255.0 192.168.2.0 255.255.255.0
+access-list 110 permit ip 192.168.1.0 255.255.255.0 192.168.2.0 255.255.255.0
+access-list 110 permit icmp 172.31.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+access-list 110 permit ip 172.31.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+access-list 110 permit icmp 10.0.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+access-list 110 permit ip 10.0.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+pager lines 24
+mtu outside 1500
+mtu inside 1500
+ip address outside pppoe setroute
+ip address inside 192.168.1.1 255.255.255.0
+ip audit info action alarm
+ip audit attack action alarm
+ip local pool vpnclientpool 192.168.2.10-192.168.2.40
+no failover
+failover timeout 0:00:00
+failover poll 15
+no failover ip address outside
+no failover ip address inside
+pdm location 192.168.1.100 255.255.255.255 inside
+pdm history enable
+arp timeout 14400
+global (outside) 10 interface
+nat (inside) 0 access-list 110
+nat (inside) 10 192.168.1.0 255.255.255.0 0 0
+nat (inside) 10 172.31.0.0 255.255.0.0 0 0
+nat (inside) 10 10.0.0.0 255.0.0.0 0 0
+access-group acl_inside in interface inside
+route inside 10.0.0.0 255.0.0.0 192.168.1.254 1
+route inside 172.31.0.0 255.255.0.0 192.168.1.254 1
+timeout xlate 3:00:00
+timeout conn 1:00:00 half-closed 0:10:00 udp 0:02:00 rpc 0:10:00 h225 1:00:00
+timeout h323 0:05:00 mgcp 0:05:00 sip 0:30:00 sip_media 0:02:00
+timeout uauth 0:05:00 absolute
+aaa-server TACACS+ protocol tacacs+
+aaa-server RADIUS protocol radius
+aaa-server LOCAL protocol local
+http server enable
+http 192.168.1.100 255.255.255.255 inside
+http 192.168.1.0 255.255.255.0 inside
+no snmp-server location
+no snmp-server contact
+snmp-server community public
+no snmp-server enable traps
+floodguard enable
+sysopt connection permit-ipsec
+crypto ipsec transform-set myset esp-des esp-md5-hmac
+crypto dynamic-map cisco 100 set transform-set myset
+crypto map dyn-map 100 ipsec-isakmp dynamic cisco
+crypto map dyn-map interface outside
+isakmp enable outside
+isakmp key ******** address 0.0.0.0 netmask 0.0.0.0
+isakmp identity address
+isakmp nat-traversal 20
+isakmp policy 20 authentication pre-share
+isakmp policy 20 encryption des
+isakmp policy 20 hash md5
+isakmp policy 20 group 2
+isakmp policy 20 lifetime 86400
+vpngroup china-vpnclient address-pool vpnclientpool
+vpngroup china-vpnclient split-tunnel 110
+vpngroup china-vpnclient idle-time 1800
+vpngroup china-vpnclient password ********
+telnet 192.168.0.0 255.255.0.0 inside
+telnet 172.31.0.0 255.255.0.0 inside
+<--- More --->
+mac-list        Add a list of mac addresses using first match search
+map             Configure IPsec crypto map
+memory          System memory utilization
+mgcp            Configure the Media Gateway Control Protocol fixup
+management-access       Enable access to internal management interface
+mroute          Configure a multicast route
+mtu             Specify MTU(Maximum Transmission Unit) for an interface
+multicast       Configure multicast on an interface
+name            Associate a name with an IP address
+nameif          Assign a name to an interface
+names           Enable, disable or display IP address to name conversion
+nat             Associate a network with a pool of global IP addresses
+ntp             Configure Network Time Protocol
+object-group    Create an object group for use in 'access-list', 'conduit', etc
+ospf            Show OSPF information or clear ospf items.
+outbound        Create an outbound access list
+pager           Control page length for pagination
+passwd          Change Telnet console access password
+pdm             Configure PIX Device Manager
+prefix-list     Configure a prefix-list
+privilege       Configure/Display privilege levels for commands
+processes       Display processes
+rip             Broadcast default route or passive RIP
+route           Enter a static route for an interface
+route-map       Create a route-map.
+router          Create/configure OSPF routing process
+routing         Configure interface specific unicast routing parameters.
+running-config  Display the current running configuration
+service         Enable system services
+shun            Manages the filtering of packets from undesired hosts
+sip             Show the current data stored for each SIP session.
+skinny          Show the current data stored for each Skinny session.
+snmp-server     Provide SNMP and event information
+ssh             Add SSH access to PIX console, set idle timeout, display
+                list of active SSH sessions & terminate a SSH session
+startup-config  Display the startup configuration
+static          Configure one-to-one address translation rule
+sysopt          Set system functional option
+tcpstat         Display status of tcp stack and tcp connections
+tech-support    Tech support
+telnet          Add telnet access to PIX console and set idle timeout
+terminal        Set terminal line parameters
+tftp-server     Specify default TFTP server address and directory
+timeout         Set the maximum idle times
+traffic         Counters for traffic statistics
+uauth           Display or clear current user authorization information
+url-cache       Enable URL caching
+url-block       Enable URL pending block buffer and long URL support
+url-server      Specify a URL filter server
+username        Configure user authentication local database
+version         Display PIX system software version
+virtual         Set address for authentication virtual servers
+vpdn            Configure VPDN (PPTP, L2TP, PPPoE) Policy
+vpnclient       Configure Easy VPN Remote
+vpngroup        Configure group settings for Cisco VPN Clients and
+                Cisco Easy VPN Remote products
+who             Show active administration sessions on PIX
+xlate           Display current translation and connection slot information
+pix535# show  ?
+
+At the end of show <command>, use the pipe character '|' followed by:
+begin|include|exclude|grep [-v] <regular_exp>, to filter show output.
+
+aaa             Enable, disable, or view TACACS+, RADIUS or LOCAL
+                user authentication, authorization and accounting
+aaa-server      Define AAA Server group
+access-group    Bind an access-list to an interface to filter inbound traffic
+access-list     Add an access list
+activation-key  Modify activation-key.
+age             This command is deprecated. See ipsec, isakmp, map, ca commands
+alias           Administer overlapping addresses with dual NAT.
+apply           Apply outbound lists to source or destination IP addresses
+arp             Change or view arp table, set arp timeout value, view statistics
+auth-prompt     Customize authentication challenge, reject or acceptance prompt
+auto-update     Configure auto update support
+banner          Configure login/session banners
+blocks          Show system buffer utilization
+ca              CEP (Certificate Enrollment Protocol)
+                Create and enroll RSA key pairs into a PKI
+                (Public Key Infrastructure).
+capture         Capture inbound and outbound packets on one or more interfaces
+checksum        View configuration information cryptochecksum
+chunkstat       Display chunk stats
+clock           Show and set the date and time of PIX
+conduit         Add conduit access to higher security level network or ICMP
+configure       Configure from terminal, floppy, memory, network, or
+                factory-default.  The configuration will be merged with the
+                active configuration except for factory-default in which case
+                the active configuration is cleared first.
+conn            Display connection information
+console         Set idle timeout for the serial console of the PIX
+cpu             Display cpu usage
+Crashinfo       Read, write and configure crash write to flash. Force a crash.
+crypto          Configure IPsec, IKE, and CA
+ctiqbe          Show the current data stored for each CTIQBE session.
+curpriv         Display current privilege level
+debug           Debug packets or ICMP tracings through the PIX Firewall.
+dhcpd           Configure DHCP Server
+dhcprelay       Configure DHCP Relay Agent
+domain-name     Change domain name
+dynamic-map     Specify a dynamic crypto map template
+eeprom          show or reprogram the 525 onboard i82559 devices
+enable          Configure enable passwords
+established     Allow inbound connections based on established connections
+failover        Enable/disable PIX failover feature to a standby PIX
+filter          Enable, disable, or view URL, FTP, HTTPS, Java, and ActiveX filt
+ering
+fixup           Add or delete PIX service and feature defaults
+flashfs         Show, destroy, or preserve filesystem information
+fragment        Configure the IP fragment database
+global          Specify, delete or view global address pools,
+                or designate a PAT(Port Address Translated) address
+h225            Show the current h225 data stored for each connection.
+h245            List the h245 connections.
+h323-ras        Show the current h323 ras data stored for each connection.
+history         Display the session command history
+http            Configure HTTP server
+icmp            Configure access for ICMP traffic that terminates at an interfac
+e
+interface       Set network interface paremeters and configure VLANs
+igmp            Clear or display IGMP groups
+ip              Set the ip address and mask for an interface
+                Define a local address pool
+                Configure Unicast RPF on an interface
+                Configure the Intrusion Detection System
+ipsec           Configure IPSEC policy
+isakmp          Configure ISAKMP policy
+local-host      Display or clear the local host network information
+logging         Enable logging facility
+mac-list        Add a list of mac addresses using first match search
+map             Configure IPsec crypto map
+memory          System memory utilization
+mgcp            Configure the Media Gateway Control Protocol fixup
+management-access       Enable access to internal management interface
+mroute          Configure a multicast route
+mtu             Specify MTU(Maximum Transmission Unit) for an interface
+multicast       Configure multicast on an interface
+name            Associate a name with an IP address
+nameif          Assign a name to an interface
+names           Enable, disable or display IP address to name conversion
+nat             Associate a network with a pool of global IP addresses
+ntp             Configure Network Time Protocol
+object-group    Create an object group for use in 'access-list', 'conduit', etc
+ospf            Show OSPF information or clear ospf items.
+outbound        Create an outbound access list
+pager           Control page length for pagination
+passwd          Change Telnet console access password
+pdm             Configure PIX Device Manager
+prefix-list     Configure a prefix-list
+privilege       Configure/Display privilege levels for commands
+processes       Display processes
+rip             Broadcast default route or passive RIP
+route           Enter a static route for an interface
+route-map       Create a route-map.
+router          Create/configure OSPF routing process
+routing         Configure interface specific unicast routing parameters.
+running-config  Display the current running configuration
+service         Enable system services
+shun            Manages the filtering of packets from undesired hosts
+sip             Show the current data stored for each SIP session.
+skinny          Show the current data stored for each Skinny session.
+snmp-server     Provide SNMP and event information
+ssh             Add SSH access to PIX console, set idle timeout, display
+                list of active SSH sessions & terminate a SSH session
+startup-config  Display the startup configuration
+static          Configure one-to-one address translation rule
+sysopt          Set system functional option
+tcpstat         Display status of tcp stack and tcp connections
+tech-support    Tech support
+telnet          Add telnet access to PIX console and set idle timeout
+terminal        Set terminal line parameters
+tftp-server     Specify default TFTP server address and directory
+timeout         Set the maximum idle times
+traffic         Counters for traffic statistics
+uauth           Display or clear current user authorization information
+url-cache       Enable URL caching
+url-block       Enable URL pending block buffer and long URL support
+url-server      Specify a URL filter server
+username        Configure user authentication local database
+version         Display PIX system software version
+virtual         Set address for authentication virtual servers
+vpdn            Configure VPDN (PPTP, L2TP, PPPoE) Policy
+vpnclient       Configure Easy VPN Remote
+vpngroup        Configure group settings for Cisco VPN Clients and
+                Cisco Easy VPN Remote products
+who             Show active administration sessions on PIX
+xlate           Display current translation and connection slot information
+pix535# show  config
+: Saved
+: Written by enable_15 at 22:41:37.693 UTC Thu May 27 2004
+PIX Version 6.3(1)
+interface ethernet0 auto
+interface ethernet1 auto
+nameif ethernet0 outside security0
+nameif ethernet1 inside security100
+enable password 2KFQnbNIdI.2KYOU encrypted
+passwd 2KFQnbNIdI.2KYOU encrypted
+hostname pix535
+domain-name test
+fixup protocol ftp 21
+fixup protocol h323 h225 1720
+fixup protocol h323 ras 1718-1719
+fixup protocol http 80
+fixup protocol ils 389
+fixup protocol pptp 1723
+fixup protocol rsh 514
+fixup protocol rtsp 554
+fixup protocol sip 5060
+fixup protocol sip udp 5060
+fixup protocol skinny 2000
+fixup protocol smtp 25
+fixup protocol sqlnet 1521
+names
+access-list acl_inside permit ip 192.168.0.0 255.255.0.0 any
+access-list acl_inside permit icmp 192.168.0.0 255.255.0.0 any
+access-list acl_inside permit ip 172.31.0.0 255.255.0.0 any
+access-list acl_inside permit icmp 172.31.0.0 255.255.0.0 any
+access-list acl_inside permit ip 10.0.0.0 255.0.0.0 any
+access-list acl_inside permit icmp 10.0.0.0 255.0.0.0 any
+access-list 110 permit icmp 192.168.1.0 255.255.255.0 192.168.2.0 255.255.255.0
+access-list 110 permit ip 192.168.1.0 255.255.255.0 192.168.2.0 255.255.255.0
+access-list 110 permit icmp 172.31.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+access-list 110 permit ip 172.31.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+access-list 110 permit icmp 10.0.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+access-list 110 permit ip 10.0.0.0 255.255.0.0 192.168.2.0 255.255.255.0
+pager lines 24
+mtu outside 1500
+mtu inside 1500
+ip address outside pppoe setroute
+ip address inside 192.168.1.1 255.255.255.0
+ip audit info action alarm
+ip audit attack action alarm
+ip local pool vpnclientpool 192.168.2.10-192.168.2.40
+no failover
+failover timeout 0:00:00
+failover poll 15
+no failover ip address outside
+no failover ip address inside
+pdm location 192.168.1.100 255.255.255.255 inside
+pdm history enable
+arp timeout 14400
+global (outside) 10 interface
+nat (inside) 0 access-list 110
+nat (inside) 10 192.168.1.0 255.255.255.0 0 0
+nat (inside) 10 172.31.0.0 255.255.0.0 0 0
+nat (inside) 10 10.0.0.0 255.0.0.0 0 0
+access-group acl_inside in interface inside
+route inside 10.0.0.0 255.0.0.0 192.168.1.254 1
+route inside 172.31.0.0 255.255.0.0 192.168.1.254 1
+timeout xlate 3:00:00
+timeout conn 1:00:00 half-closed 0:10:00 udp 0:02:00 rpc 0:10:00 h225 1:00:00
+timeout h323 0:05:00 mgcp 0:05:00 sip 0:30:00 sip_media 0:02:00
+timeout uauth 0:05:00 absolute
+aaa-server TACACS+ protocol tacacs+
+aaa-server RADIUS protocol radius
+aaa-server LOCAL protocol local
+http server enable
+http 192.168.1.100 255.255.255.255 inside
+http 192.168.1.0 255.255.255.0 inside
+no snmp-server location
+no snmp-server contact
+snmp-server community public
+no snmp-server enable traps
+floodguard enable
+sysopt connection permit-ipsec
+crypto ipsec transform-set myset esp-des esp-md5-hmac
+crypto dynamic-map cisco 100 set transform-set myset
+crypto map dyn-map 100 ipsec-isakmp dynamic cisco
+crypto map dyn-map interface outside
+isakmp enable outside
+isakmp key ******** address 0.0.0.0 netmask 0.0.0.0
+isakmp identity address
+isakmp nat-traversal 20
+isakmp policy 20 authentication pre-share
+isakmp policy 20 encryption des
+isakmp policy 20 hash md5
+isakmp policy 20 group 2
+isakmp policy 20 lifetime 86400
+vpngroup china-vpnclient address-pool vpnclientpool
+vpngroup china-vpnclient split-tunnel 110
+vpngroup china-vpnclient idle-time 1800
+vpngroup china-vpnclient password ********
+telnet 192.168.0.0 255.255.0.0 inside
+telnet 172.31.0.0 255.255.0.0 inside
+telnet 10.0.0.0 255.0.0.0 inside
+telnet timeout 5
+ssh timeout 5
+console timeout 0
+vpdn group pppoe_group request dialout pppoe
+vpdn group pppoe_group localname *allway1
+vpdn group pppoe_group ppp authentication pap
+vpdn username *allway1 password ********
+dhcpd address 192.168.1.2-192.168.1.200 inside
+dhcpd dns 202.106.0.20
+dhcpd lease 3600
+dhcpd ping_timeout 750
+username cisco password 3USUcOPFUiMCO4Jk encrypted privilege 2
+terminal width 80
+Cryptochecksum:ef859b7ef9f4d023431f90a653d50a77
+pix535#
